@@ -1,0 +1,84 @@
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+@media (min-width: 0px) and (max-width: 420px) {
+    .container {
+      background-color: grey;
+    }
+    #titulo::before {
+        content: "CINZA";
+        color: #434343;
+    }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+    .container {
+      background-color: orange;
+    }
+    #titulo::before {
+        content: "LARANJA";
+        color: #af7303;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      background-color: #ff00a2;
+    }
+    #titulo::before {
+        content: "ROSA";
+        color: #8d015a;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .container {
+      background-color: red;
+    }
+    #titulo::before {
+        content: "VERMELHO";
+        color: #8d0000;
+    }
+}
+
+@media (min-width: 1081px) and (max-width: 1366px) {
+    .container {
+      background-color: purple;
+    }
+    #titulo::before {
+        content: "ROXO";
+        color: #3c013c;
+    }
+}
+
+@media (min-width: 1367px) and (max-width: 1920px) {
+    .container {
+      background-color: yellow;
+    }
+    #titulo::before {
+        content: "AMARELO";
+        color: #95950b;
+    }
+}
+
+@media (min-width: 1921px) {
+    .container {
+      background-color: green;
+    }
+    #titulo::before {
+        content: "VERDE";
+        color: #004800;
+    }
+}
