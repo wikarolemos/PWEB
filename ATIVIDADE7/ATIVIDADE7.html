@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pedra, papel ou tesoura</title>
+    </head>
+    <body>
+        <script>
+            function PPT() {
+                var escolhas = ['Pedra', 'Papel', 'Tesoura']
+                var usuario = prompt("Pedra, Papel ou Tesoura\nDigite: \n1 para Pedra \n2 para Papel \n3 para Tesoura")
+                var usuario = parseFloat(usuario)
+                usuario--;
+                var computador = Math.floor(Math.random() * 3)
+
+                alert("Usuário escolheu: " + escolhas[usuario] +
+                    "\nComputador escolheu: " + escolhas[computador]
+                )
+
+                if (usuario === computador) {
+                    alert('Empate')
+                } else if ((usuario === 0 && computador === 2) || (usuario === 1 && computador === 0) || (usuario === 2 && computador === 1)) {
+                    alert('Usuário ganhou')
+                } else {
+                    alert('Computador ganhou')
+                }
+            }
+
+            jogar = prompt("Quer iniciar um jogo? \nDigite: S")
+            while(jogar == "S" || jogar == "s") {
+                PPT()
+
+                jogar = prompt("Quer recomeçar o jogo? \nDigite: S")
+            }
+        </script>
+    </body>
+</html>
